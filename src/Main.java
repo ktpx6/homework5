@@ -5,37 +5,32 @@ public class Main {
 
         if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке ...");
-        }
-        else if (clientOS == 1) {
+        } else if (clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке ...");
-        }
-        else {
+        } else {
             System.out.println("Не удалось определить операционную систему.");
         }
 
         System.out.println("Задача 2");
-        int clientDeviceYear = 2023;
+        char clientDeviceYear = 2023;
+        int clientDeviceOS = 0;
 
-        if (clientDeviceYear <= 2015) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        if (clientDeviceOS == 0 && clientDeviceYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        } else if (clientDeviceOS == 0 && clientDeviceYear > 2015) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите приложение на ваш телефон");
         }
-        else if (clientDeviceYear > 2015) {
-                System.out.println("Установите версию приложения для iOS по ссылке");
-        }
-        else {
-            System.out.println("Установите приложение на ваш телефон");}
-
 
         System.out.println("Задача 3");
         int year = 2021;
 
         if (year > 1584 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
             System.out.println(year + " год является високосным");
+        } else {
+            System.out.println(year + " год не является високосным");
         }
-        else {
-            System.out.println(year + " год не является високосным.");
-        }
-
 
 
         System.out.println("Задача 4");
@@ -44,14 +39,11 @@ public class Main {
 
         if (deliveryDistance <= 20) {
             deliveryDays = 1;
-        }
-        else if (deliveryDistance <= 60) {
+        } else if (deliveryDistance <= 60) {
             deliveryDays = 2;
-        }
-        else if (deliveryDistance <= 100) {
+        } else if (deliveryDistance <= 100) {
             deliveryDays = 3;
-        }
-        else {
+        } else {
             System.out.println("Доставки на такое расстояние не предусмотрено");
         }
 
@@ -83,6 +75,8 @@ public class Main {
                 break;
 
             default:
-                System.out.println("Некорректный номер месяца");}
+                System.out.println("Некорректный номер месяца");
+        }
+
     }
 }
