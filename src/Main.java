@@ -19,8 +19,11 @@ public class Main {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         } else if (clientDeviceOS == 0 && clientDeviceYear > 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else {
-            System.out.println("Установите приложение на ваш телефон");
+        }
+        if (clientDeviceOS == 1 && clientDeviceYear <= 2015) {
+            System.out.println("Установите облегченную версию для Android по ссылке");
+        } else if (clientDeviceOS == 1 && clientDeviceYear > 2015) {
+            System.out.println("Установите версию для Android по ссылке");
         }
 
         System.out.println("Задача 3");
@@ -31,7 +34,6 @@ public class Main {
         } else {
             System.out.println(year + " год не является високосным");
         }
-
 
         System.out.println("Задача 4");
         int deliveryDistance = 95;
@@ -46,8 +48,8 @@ public class Main {
         } else {
             System.out.println("Доставки на такое расстояние не предусмотрено");
         }
-
         System.out.println("Потребуется дней: " + deliveryDays);
+
 
         System.out.println("Задача 5");
         int monthNumber = 12;
